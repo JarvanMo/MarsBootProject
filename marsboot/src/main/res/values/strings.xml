@@ -1,5 +1,5 @@
 <resources>
-    <string name="lib_name">Common</string>
+    <string name="lib_name">MarsBoot</string>
     <string name="new_version_available">发现新版本</string>
     <string name="default_positive_text">确定</string>
     <string name="default_negative_text">取消</string>
@@ -19,4 +19,8 @@
 
     <string name="network_connection_problem">网络连接异常</string>
     <string name="can_not_be_empty">该项不能为空</string>
+
+    <string name="simple_image_selector_camera">从相机</string>
+    <string name="simple_image_selector_album">从相册</string>
+    <string name="simple_image_selector_cancel">取消</string>
 </resources>

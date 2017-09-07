@@ -7,4 +7,6 @@
     <color name="colorSuccess">#66BB6A</color>
     <color name="colorWarning">#FFA726</color>
     <color name="colorError">#EF5350</color>
+
+    <color name="image_selector_divider_color">#e4e4e4</color>
 </resources>

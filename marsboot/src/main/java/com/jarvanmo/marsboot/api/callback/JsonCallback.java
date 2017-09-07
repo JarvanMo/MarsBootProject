@@ -3,10 +3,12 @@ package com.jarvanmo.marsboot.api.callback;
 import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 
-import com.jarvanmo.common.R;
-import com.jarvanmo.common.api.response.JsonResponse;
-import com.jarvanmo.common.util.MLog;
-import com.jarvanmo.common.widget.MToast;
+
+import com.jarvanmo.marsboot.R;
+import com.jarvanmo.marsboot.api.response.JsonResponse;
+import com.jarvanmo.marsboot.tools.image.SimpleImageSelector;
+import com.jarvanmo.marsboot.util.MLog;
+import com.jarvanmo.marsboot.widget.MToast;
 
 import okhttp3.Headers;
 import retrofit2.Call;
