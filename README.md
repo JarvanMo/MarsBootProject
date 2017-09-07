@@ -7,4 +7,4 @@
 
 **Plan To Do**
 SimpleImageSelector
-Updater
+AppUpdater
