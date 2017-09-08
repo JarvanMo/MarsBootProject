@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                                                     Log.e("sss",uri.toString());
                                                 }
                                             })
-                                            .needCrop()
+                                            .crop()
                                             .build();
 
         findViewById(R.id.hello).setOnClickListener(new View.OnClickListener() {

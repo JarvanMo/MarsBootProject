@@ -54,12 +54,12 @@ public class SimpleImageSelector {
 
     private List<File> cachedImages = new ArrayList<>();
 
-   private SimpleImageSelector(WeakReference<Activity> activityWeakReference) {
+    private SimpleImageSelector(WeakReference<Activity> activityWeakReference) {
         this.activityWeakReference = activityWeakReference;
     }
 
 
-   private SimpleImageSelector build() {
+    private SimpleImageSelector build() {
         bottomSheetDialog = new BottomSheetDialog(activityWeakReference.get());
 
         LayoutInflater inflater = LayoutInflater.from(activityWeakReference.get());
@@ -77,11 +77,12 @@ public class SimpleImageSelector {
         return this;
     }
 
-    private void addViews(BottomSheetSimpleImageSelectorBinding binding){
+    private void addViews(BottomSheetSimpleImageSelectorBinding binding) {
+        int index = 0;
         for (SelectorItemType itemType : itemTypes) {
-            switch (itemType){
+            switch (itemType) {
                 case ALBUM:
-//                    setUpAlbum(binding,itemTypes.in);
+                    setUpAlbum(binding,(itemTypes.size() - 1) != index );
                     break;
                 default:
                     break;
@@ -89,7 +90,8 @@ public class SimpleImageSelector {
         }
     }
 
-    private void setUpAlbum(BottomSheetSimpleImageSelectorBinding binding,boolean needDivider){
+    private void setUpAlbum(BottomSheetSimpleImageSelectorBinding binding, boolean needDivider) {
+
 
     }
 
@@ -310,8 +312,17 @@ public class SimpleImageSelector {
         }
 
 
-        public NeedCropBuilder needCrop() {
-            return new NeedCropBuilder(activityWeakReference, itemTypes, photoPathCallback, selectorCallback);
+        public NeedCropBuilder crop() {
+            return crop(null);
+        }
+
+        public NeedCropBuilder crop(CropParameters parameters) {
+            NeedCropBuilder needCropBuilder = new NeedCropBuilder(activityWeakReference, itemTypes, photoPathCallback, selectorCallback);
+            if (parameters != null) {
+                needCropBuilder.parameters = parameters;
+            }
+
+            return needCropBuilder;
         }
 
     }
@@ -337,12 +348,6 @@ public class SimpleImageSelector {
 
         public NeedCropBuilder croppedImagePath(@NonNull ImagePathCallback callback) {
             croppedImagePathCallback = callback;
-            return this;
-        }
-
-
-        public NeedCropBuilder parameters(@NonNull CropParameters parameters) {
-            this.parameters = parameters;
             return this;
         }
 
