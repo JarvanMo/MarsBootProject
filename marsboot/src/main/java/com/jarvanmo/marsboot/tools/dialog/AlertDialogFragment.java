@@ -1,4 +1,4 @@
-package com.jarvanmo.marsboot.widget.dialog;
+package com.jarvanmo.marsboot.tools.dialog;
 
 
 import android.app.Dialog;
@@ -10,7 +10,7 @@ import android.support.v7.app.AlertDialog;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.jarvanmo.common.R;
+import com.jarvanmo.marsboot.R;
 
 
 /**

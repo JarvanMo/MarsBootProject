@@ -8,7 +8,8 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
-import com.jarvanmo.common.R;
+import com.jarvanmo.marsboot.R;
+
 
 /**
  * Created by mo on 17-6-21.

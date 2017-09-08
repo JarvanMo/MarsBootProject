@@ -1,10 +1,10 @@
-package com.jarvanmo.marsboot.widget.dialog;
+package com.jarvanmo.marsboot.tools.dialog;
 
 import android.os.Bundle;
 import android.support.annotation.StringRes;
 import android.support.v4.app.FragmentActivity;
 
-import com.jarvanmo.common.util.Preconditions;
+import com.jarvanmo.marsboot.util.Preconditions;
 
 
 /**

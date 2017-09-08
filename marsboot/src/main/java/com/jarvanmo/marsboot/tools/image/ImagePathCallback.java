@@ -1,5 +1,7 @@
 package com.jarvanmo.marsboot.tools.image;
 
+import java.io.File;
+
 /**
  * Created by mo on 17-9-7.
  *
@@ -8,5 +10,5 @@ package com.jarvanmo.marsboot.tools.image;
 
 public interface ImagePathCallback {
 
-    String createPath();
+    File createPhotoFile();
 }

@@ -1,4 +1,4 @@
-package com.jarvanmo.marsboot.widget.dialog;
+package com.jarvanmo.marsboot.tools.dialog;
 
 /**
  * Created by Administrator on 2015/8/27.

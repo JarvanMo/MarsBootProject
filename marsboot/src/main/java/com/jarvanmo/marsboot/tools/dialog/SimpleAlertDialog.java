@@ -1,4 +1,4 @@
-package com.jarvanmo.marsboot.widget.dialog;
+package com.jarvanmo.marsboot.tools.dialog;
 
 import android.support.v4.app.FragmentActivity;
 

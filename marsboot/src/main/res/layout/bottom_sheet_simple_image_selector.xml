@@ -9,33 +9,46 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:divider="@drawable/shape_image_selector_divider"
+        android:orientation="vertical"
         android:showDividers="middle">
 
         <TextView
+            android:id="@+id/fromCamera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:padding="10dp"
-            android:textColor="?android:attr/colorPrimary"
             android:text="@string/simple_image_selector_camera"
-            android:gravity="center" />
+            android:textColor="?android:attr/colorPrimary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/image_selector_divider_color" />
 
         <TextView
-            android:textColor="?android:attr/colorPrimary"
+            android:id="@+id/fromAlbum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:padding="10dp"
             android:text="@string/simple_image_selector_album"
-            android:gravity="center" />
+            android:textColor="?android:attr/colorPrimary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/image_selector_divider_color" />
 
         <TextView
-            android:textColor="?android:attr/colorPrimary"
+            android:id="@+id/cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:padding="10dp"
             android:text="@string/simple_image_selector_cancel"
-            android:gravity="center" />
+            android:textColor="?android:attr/colorPrimary" />
 
     </LinearLayout>
 

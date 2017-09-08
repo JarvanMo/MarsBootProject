@@ -2,7 +2,8 @@ package com.jarvanmo.marsboot.base;
 
 import android.app.Application;
 
-import com.jarvanmo.common.widget.MToast;
+import com.jarvanmo.marsboot.widget.MToast;
+
 
 /**
  * Created by mo on 17-3-21.

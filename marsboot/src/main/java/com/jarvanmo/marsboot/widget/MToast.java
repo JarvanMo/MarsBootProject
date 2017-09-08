@@ -15,7 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jarvanmo.common.R;
+
+import com.jarvanmo.marsboot.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
