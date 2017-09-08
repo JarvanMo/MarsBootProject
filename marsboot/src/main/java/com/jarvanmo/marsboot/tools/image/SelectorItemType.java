@@ -8,6 +8,6 @@ package com.jarvanmo.marsboot.tools.image;
 
 public enum SelectorItemType {
     CAMERA(),
-    ALUBM(),
+    ALBUM(),
     CANCEL()
 }

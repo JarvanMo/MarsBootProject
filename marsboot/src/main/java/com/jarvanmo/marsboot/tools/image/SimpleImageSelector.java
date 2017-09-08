@@ -54,12 +54,12 @@ public class SimpleImageSelector {
 
     private List<File> cachedImages = new ArrayList<>();
 
-    SimpleImageSelector(WeakReference<Activity> activityWeakReference) {
+   private SimpleImageSelector(WeakReference<Activity> activityWeakReference) {
         this.activityWeakReference = activityWeakReference;
     }
 
 
-    SimpleImageSelector build() {
+   private SimpleImageSelector build() {
         bottomSheetDialog = new BottomSheetDialog(activityWeakReference.get());
 
         LayoutInflater inflater = LayoutInflater.from(activityWeakReference.get());
@@ -77,9 +77,25 @@ public class SimpleImageSelector {
         return this;
     }
 
+    private void addViews(BottomSheetSimpleImageSelectorBinding binding){
+        for (SelectorItemType itemType : itemTypes) {
+            switch (itemType){
+                case ALBUM:
+//                    setUpAlbum(binding,itemTypes.in);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void setUpAlbum(BottomSheetSimpleImageSelectorBinding binding,boolean needDivider){
+
+    }
+
     private void initFromAlbum(BottomSheetSimpleImageSelectorBinding binding) {
 
-        if (!itemTypes.contains(SelectorItemType.ALUBM)) {
+        if (!itemTypes.contains(SelectorItemType.ALBUM)) {
             binding.fromAlbum.setVisibility(View.GONE);
         }
 
@@ -281,7 +297,7 @@ public class SimpleImageSelector {
             if (itemTypes == null) {
                 itemTypes = new ArraySet<>();
                 itemTypes.add(SelectorItemType.CAMERA);
-                itemTypes.add(SelectorItemType.ALUBM);
+                itemTypes.add(SelectorItemType.ALBUM);
                 itemTypes.add(SelectorItemType.CANCEL);
             }
             simpleImageSelector.itemTypes = itemTypes;
@@ -340,7 +356,7 @@ public class SimpleImageSelector {
             if (itemTypes == null) {
                 itemTypes = new ArraySet<>();
                 itemTypes.add(SelectorItemType.CAMERA);
-                itemTypes.add(SelectorItemType.ALUBM);
+                itemTypes.add(SelectorItemType.ALBUM);
                 itemTypes.add(SelectorItemType.CANCEL);
             }
             simpleImageSelector.itemTypes = itemTypes;
