@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.jarvanmo.marsboot.tools.image.CropParameters;
 import com.jarvanmo.marsboot.tools.image.ImageSelectorCallback;
 import com.jarvanmo.marsboot.tools.image.SelectorItemType;
 import com.jarvanmo.marsboot.tools.image.SimpleImageSelector;
@@ -18,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         selector  = new SimpleImageSelector.Builder(this)
-                                            .from(SelectorItemType.ALBUM,SelectorItemType.CAMERA)
+                                            .from(SelectorItemType.ALBUM,SelectorItemType.ALBUM,SelectorItemType.CANCEL)
                                             .result(new ImageSelectorCallback() {
                                                 @Override
                                                 public void onImageResult(Uri uri) {
                                                     Log.e("sss",uri.toString());
                                                 }
                                             })
-                                            .crop()
+                                            .crop(new CropParameters())
                                             .build();
 
         findViewById(R.id.hello).setOnClickListener(new View.OnClickListener() {

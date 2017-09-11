@@ -99,6 +99,7 @@ public class SimpleImageSelector {
 
         if (!itemTypes.contains(SelectorItemType.ALBUM)) {
             binding.fromAlbum.setVisibility(View.GONE);
+            binding.divider1.setVisibility(View.GONE);
         }
 
         binding.fromAlbum.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +121,7 @@ public class SimpleImageSelector {
 
         if (!itemTypes.contains(SelectorItemType.CAMERA)) {
             binding.fromAlbum.setVisibility(View.GONE);
+            binding.divider2.setVisibility(View.GONE);
         }
 
         binding.fromCamera.setOnClickListener(new View.OnClickListener() {
