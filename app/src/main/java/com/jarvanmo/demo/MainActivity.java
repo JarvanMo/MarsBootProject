@@ -19,13 +19,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         selector  = new SimpleImageSelector.Builder(this)
                                             .from(SelectorItemType.ALBUM,SelectorItemType.CAMERA,SelectorItemType.CAMERA)
+                                            .from(SelectorItemType.ALBUM,SelectorItemType.ALBUM,SelectorItemType.CANCEL)
                                             .result(new ImageSelectorCallback() {
                                                 @Override
                                                 public void onImageResult(Uri uri) {
                                                     Log.e("sss",uri.toString());
                                                 }
                                             })
-                                            .crop()
+                                            .crop(new CropParameters())
                                             .build();
 
         findViewById(R.id.hello).setOnClickListener(new View.OnClickListener() {
