@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.jarvanmo.marsboot.tools.image.selector.CropParameters;
 import com.jarvanmo.marsboot.tools.image.selector.ImageSelectorCallback;
 import com.jarvanmo.marsboot.tools.image.selector.SelectorItemType;
 import com.jarvanmo.marsboot.tools.image.selector.SimpleImageSelector;
