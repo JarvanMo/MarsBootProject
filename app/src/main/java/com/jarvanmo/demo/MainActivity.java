@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.jarvanmo.marsboot.tools.image.ImageSelectorCallback;
-import com.jarvanmo.marsboot.tools.image.SelectorItemType;
-import com.jarvanmo.marsboot.tools.image.SimpleImageSelector;
+import com.jarvanmo.marsboot.tools.image.selector.ImageSelectorCallback;
+import com.jarvanmo.marsboot.tools.image.selector.SelectorItemType;
+import com.jarvanmo.marsboot.tools.image.selector.SimpleImageSelector;
 
 public class MainActivity extends AppCompatActivity {
     SimpleImageSelector selector;
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         selector  = new SimpleImageSelector.Builder(this)
-                                            .from(SelectorItemType.ALBUM,SelectorItemType.CAMERA)
+                                            .from(SelectorItemType.ALBUM,SelectorItemType.CAMERA,SelectorItemType.CAMERA)
                                             .result(new ImageSelectorCallback() {
                                                 @Override
                                                 public void onImageResult(Uri uri) {

@@ -1,4 +1,4 @@
-package com.jarvanmo.marsboot.tools.image;
+package com.jarvanmo.marsboot.tools.image.selector;
 
 import android.graphics.Bitmap;
 

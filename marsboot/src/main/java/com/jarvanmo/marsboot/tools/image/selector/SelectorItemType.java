@@ -1,4 +1,4 @@
-package com.jarvanmo.marsboot.tools.image;
+package com.jarvanmo.marsboot.tools.image.selector;
 
 /**
  * Created by mo on 17-9-7.
