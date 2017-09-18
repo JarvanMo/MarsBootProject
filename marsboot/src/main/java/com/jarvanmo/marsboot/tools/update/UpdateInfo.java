@@ -9,6 +9,8 @@ package com.jarvanmo.marsboot.tools.update;
 public class UpdateInfo {
 
 
+    private boolean autoCompare = true;
+
     private boolean hasUpdate = false;
 
 
@@ -36,7 +38,7 @@ public class UpdateInfo {
     }
 
     /**
-     * @see #setVersionCode(int)
+     * @see #setAutoCompare(boolean) (int)
      * */
     public void setHasUpdate(boolean hasUpdate) {
         this.hasUpdate = hasUpdate;
@@ -78,10 +80,7 @@ public class UpdateInfo {
         return versionCode;
     }
 
-    /**
-     * @param versionCode its priority is higher than hasUpdate
-     *                    once it was set,the hasUpdate no longer works
-     * **/
+
     public void setVersionCode(int versionCode) {
         this.versionCode = versionCode;
     }
@@ -106,9 +105,6 @@ public class UpdateInfo {
         return url;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
 
     public String getMd5() {
         return md5;
@@ -124,5 +120,17 @@ public class UpdateInfo {
 
     public void setSize(long size) {
         this.size = size;
+    }
+
+    public boolean isAutoCompare() {
+        return autoCompare;
+    }
+
+    /**
+     * @param autoCompare its priority is higher than hasUpdate
+     *                    once it was true,the hasUpdate no longer works
+     * **/
+    public void setAutoCompare(boolean autoCompare) {
+        this.autoCompare = autoCompare;
     }
 }
