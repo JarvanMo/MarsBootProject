@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         selector  = new SimpleImageSelector.Builder(this)
-                                            .from(SelectorItemType.ALBUM,SelectorItemType.ALBUM,SelectorItemType.CANCEL)
                                             .result(new ImageSelectorCallback() {
                                                 @Override
                                                 public void onImageResult(Uri uri) {
