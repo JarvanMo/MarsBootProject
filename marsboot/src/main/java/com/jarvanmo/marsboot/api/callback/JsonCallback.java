@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 
 import com.jarvanmo.marsboot.R;
 import com.jarvanmo.marsboot.api.response.JsonResponse;
-import com.jarvanmo.marsboot.tools.image.SimpleImageSelector;
 import com.jarvanmo.marsboot.util.MLog;
 import com.jarvanmo.marsboot.widget.MToast;
 
