@@ -23,17 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        selector = new SimpleImageSelector.Builder(this)
-                .from(SelectorItemType.ALBUM, SelectorItemType.CAMERA, SelectorItemType.CAMERA)
-                .from(SelectorItemType.ALBUM, SelectorItemType.ALBUM, SelectorItemType.CANCEL)
-                .result(new ImageSelectorCallback() {
-                    @Override
-                    public void onImageResult(Uri uri) {
-                        Log.e("sss", uri.toString());
-                    }
-                })
-                .crop(new CropParameters())
-                .build();
         selector  = new SimpleImageSelector.Builder(this)
                                             .result(new ImageSelectorCallback() {
                                                 @Override
@@ -44,11 +33,7 @@ public class MainActivity extends AppCompatActivity {
                                             .crop(new CropParameters())
                                             .build();
 
-        OkHttpClient client = new OkHttpClient().newBuilder().build();
-        Request request = new Request.Builder().build();
-        client.newCall(request);
 
-        new AppUpdater.Builder(this).get("").
 
         findViewById(R.id.hello).setOnClickListener(new View.OnClickListener() {
             @Override
